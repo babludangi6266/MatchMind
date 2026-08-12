@@ -12,7 +12,7 @@ export interface User {
 interface AuthState {
   user: User | null;
   token: string | null;
-  theme: 'dark' | 'light';
+  theme: 'light' | 'dark';
   setAuth: (user: User, token: string) => void;
   logout: () => void;
   toggleTheme: () => void;
@@ -24,7 +24,7 @@ const savedToken = localStorage.getItem('matchmind_token');
 export const useAuthStore = create<AuthState>((set) => ({
   user: savedUser ? JSON.parse(savedUser) : null,
   token: savedToken || null,
-  theme: 'dark',
+  theme: 'light',
   setAuth: (user: User, token: string) => {
     localStorage.setItem('matchmind_user', JSON.stringify(user));
     localStorage.setItem('matchmind_token', token);
@@ -37,7 +37,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
   toggleTheme: () => {
     set((state: AuthState) => {
-      const nextTheme = state.theme === 'dark' ? 'light' : 'dark';
+      const nextTheme = state.theme === 'light' ? 'dark' : 'light';
       if (nextTheme === 'dark') {
         document.documentElement.classList.add('dark');
         document.documentElement.classList.remove('light');

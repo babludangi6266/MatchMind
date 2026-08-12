@@ -8,41 +8,51 @@
     --bg-surface: #FFFFFF;
     --border-color: #E2E8F0;
     --text-primary: #0F172A;
-    --text-secondary: #64748B;
+    --text-secondary: #475569;
   }
 
   .dark {
-    --bg-primary: #0B1120;
-    --bg-surface: #111827;
-    --border-color: #1F2937;
-    --text-primary: #F9FAFB;
-    --text-secondary: #9CA3AF;
+    --bg-primary: #0F172A;
+    --bg-surface: #1E293B;
+    --border-color: #334155;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
   }
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Custom Glassmorphic Cards */
+/* Glassmorphism for Light SaaS Interface */
 .glass-card {
-  background: rgba(17, 24, 39, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
-.light .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+.dark .glass-card {
+  background: rgba(30, 41, 59, 0.85);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+}
+
+/* Custom Soft Radial Glow Effects */
+.bg-glow-light {
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.07) 0%, transparent 65%);
+}
+
+.bg-glow-emerald {
+  background: radial-gradient(circle at 100% 50%, rgba(20, 184, 166, 0.06) 0%, transparent 60%);
 }
 
 /* Custom Scrollbars */
@@ -56,19 +66,14 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #374151;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4B5563;
+  background: #94A3B8;
 }
 
-/* Radial Glow Effects */
-.bg-glow-indigo {
-  background: radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
-}
-
-.bg-glow-emerald {
-  background: radial-gradient(circle at 100% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 60%);
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
 }

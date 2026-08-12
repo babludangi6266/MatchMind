@@ -58,30 +58,30 @@ export const AtsPipelinePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
         {/* Top Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-6">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200/80 dark:border-slate-800 pb-6">
           <div>
-            <span className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Candidate Recruitment Workflow</span>
-            <h1 className="font-display font-bold text-2xl text-white flex items-center gap-2">
-              <Kanban className="w-6 h-6 text-indigo-400" /> ATS Kanban Pipeline
+            <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Recruitment Pipeline Workflow</span>
+            <h1 className="font-display font-extrabold text-2xl text-slate-900 dark:text-white flex items-center gap-2 mt-0.5">
+              <Kanban className="w-6 h-6 text-indigo-600 dark:text-indigo-400" /> ATS Kanban Pipeline
             </h1>
           </div>
 
           <div className="flex items-center gap-3">
             {/* Job Filter Selector */}
-            <div className="flex items-center gap-2 bg-slate-900 border border-slate-800 p-2 rounded-xl text-xs">
+            <div className="flex items-center gap-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-2.5 rounded-2xl text-xs shadow-sm font-semibold">
               <Filter className="w-4 h-4 text-slate-400" />
               <select
                 value={selectedJobId}
                 onChange={(e) => handleJobSelect(e.target.value)}
-                className="bg-transparent text-white font-semibold focus:outline-none cursor-pointer"
+                className="bg-transparent text-slate-800 dark:text-white font-bold focus:outline-none cursor-pointer"
               >
                 {jobs.map((job) => (
-                  <option key={job.id} value={job.id} className="bg-slate-900 text-white">
+                  <option key={job.id} value={job.id} className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-medium">
                     {job.title} ({job.company})
                   </option>
                 ))}
@@ -90,7 +90,7 @@ export const AtsPipelinePage: React.FC = () => {
 
             <button
               onClick={fetchJobsAndApps}
-              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
+              className="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 hover:text-slate-900 dark:text-slate-300 shadow-sm"
               title="Refresh Pipeline"
             >
               <RefreshCw className="w-4 h-4" />
@@ -100,7 +100,7 @@ export const AtsPipelinePage: React.FC = () => {
 
         {/* Interactive Kanban Board */}
         {loading ? (
-          <div className="h-96 rounded-2xl bg-slate-900/60 border border-slate-800 animate-pulse" />
+          <div className="h-96 rounded-3xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 animate-pulse" />
         ) : (
           <KanbanBoard applications={applications} onStatusChange={handleStatusChange} />
         )}
