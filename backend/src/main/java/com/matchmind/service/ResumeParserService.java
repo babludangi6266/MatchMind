@@ -38,12 +38,17 @@ public class ResumeParserService {
     public List<String> extractSkills(String text) {
         if (text == null || text.isBlank()) return Collections.emptyList();
         Set<String> matchedSkills = new LinkedHashSet<>();
-        String lowerText = text.toLowerCase();
 
         for (String skill : KNOWN_SKILLS) {
-            String regex = "(?i)\\b" + java.util.regex.Pattern.quote(skill) + "\\b";
-            if (lowerText.matches(".*" + regex.toLowerCase() + ".*") || lowerText.contains(skill.toLowerCase())) {
-                matchedSkills.add(skill);
+            try {
+                java.util.regex.Pattern pattern = java.util.regex.Pattern.compile("(?i)\\b" + java.util.regex.Pattern.quote(skill) + "\\b");
+                if (pattern.matcher(text).find() || text.toLowerCase().contains(skill.toLowerCase())) {
+                    matchedSkills.add(skill);
+                }
+            } catch (Exception e) {
+                if (text.toLowerCase().contains(skill.toLowerCase())) {
+                    matchedSkills.add(skill);
+                }
             }
         }
         return new ArrayList<>(matchedSkills);
