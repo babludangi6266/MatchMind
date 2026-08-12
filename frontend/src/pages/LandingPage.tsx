@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Navbar } from '../components/layout/Navbar';
 import { CircularScoreRing } from '../components/ui/CircularScoreRing';
 import { 
@@ -761,87 +762,98 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* ULTRA-PREMIUM REDESIGN: Call To Action Banner with Animated SVG Graphics & Radial Aura */}
-      <section className="relative py-24 bg-gradient-to-br from-indigo-900 via-slate-900 to-teal-950 text-white overflow-hidden shadow-2xl border-t border-indigo-500/20">
-        
-        {/* Animated Moving Background SVG Grid & Particle Orbits */}
-        <div className="absolute inset-0 pointer-events-none opacity-35 z-0">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="cta-mesh" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#818CF8" stopOpacity="0.8" />
-                <stop offset="50%" stopColor="#2DD4BF" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#C4B5FD" stopOpacity="0.1" />
-              </linearGradient>
-            </defs>
-
-            {/* Dynamic Wave Rays */}
-            <path d="M -100 100 Q 350 240 800 60 T 1700 120" fill="none" stroke="url(#cta-mesh)" strokeWidth="3" className="animate-dash-flow" />
-            <path d="M -50 180 Q 450 40 950 200 T 1800 100" fill="none" stroke="url(#cta-mesh)" strokeWidth="2" strokeDasharray="8 8" className="animate-dash-flow" />
-
-            {/* Orbit Beacons */}
-            <circle cx="350" cy="120" r="8" fill="#2DD4BF" className="animate-ping opacity-75" />
-            <circle cx="350" cy="120" r="5" fill="#FFFFFF" />
-
-            <circle cx="950" cy="80" r="8" fill="#818CF8" className="animate-ping opacity-75" />
-            <circle cx="950" cy="80" r="5" fill="#FFFFFF" />
-          </svg>
-        </div>
-
-        {/* Ambient Radial Glow Lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-r from-indigo-500/20 via-teal-500/20 to-purple-500/20 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+      {/* ULTRA-PREMIUM REDESIGN: Porcelain & Holographic Light Aura CTA Pod */}
+      <section className="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Top Pill Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
-            <Sparkles className="w-4 h-4 text-teal-300" />
-            <span>Instant Access • $0 Infrastructure Operating Cost</span>
-          </div>
-
-          {/* Main CTA Headline */}
-          <h2 className="font-display text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
-            Ready to Experience <br />
-            <span className="bg-gradient-to-r from-teal-300 via-indigo-200 to-purple-300 bg-clip-text text-transparent">
-              AI Vector Job Matching?
-            </span>
-          </h2>
-
-          {/* Subtitle */}
-          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-normal">
-            Test candidate resume uploads, job requirement embeddings, and live recruitment Kanban boards in under 60 seconds.
-          </p>
-
-          {/* Enhanced CTA Button Group */}
-          <div className="flex flex-wrap items-center justify-center gap-5 pt-2">
+          <div className="relative rounded-[2.5rem] bg-gradient-to-br from-indigo-50/80 via-white to-teal-50/60 dark:from-slate-900 dark:via-slate-900/90 dark:to-slate-900 border border-indigo-200/80 dark:border-slate-800 p-8 sm:p-14 shadow-2xl overflow-hidden">
             
-            {/* Primary Action Button */}
-            <Link
-              to="/register"
-              className="group relative px-9 py-4 rounded-2xl bg-gradient-to-r from-teal-400 via-emerald-400 to-teal-500 text-slate-950 font-extrabold text-xs sm:text-sm shadow-2xl shadow-teal-500/25 transition-all hover:scale-105 active:scale-95 flex items-center gap-3 border border-teal-200"
-            >
-              <span>Get Started Free</span>
-              <div className="w-7 h-7 rounded-xl bg-slate-950/10 flex items-center justify-center text-slate-950 group-hover:translate-x-1 transition-transform">
-                <ArrowRight className="w-4 h-4" />
+            {/* Ambient Animated Vector Energy Mesh background */}
+            <div className="absolute inset-0 pointer-events-none opacity-30 z-0">
+              <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 100 Q 400 20 800 180 T 1600 100" fill="none" stroke="#6366F1" strokeWidth="2" className="animate-dash-flow" />
+                <path d="M 0 200 Q 500 280 1000 80 T 1800 220" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeDasharray="6 6" className="animate-dash-flow" />
+              </svg>
+            </div>
+
+            {/* Ambient Radial Soft Glow */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              
+              {/* Left Side: Interactive DotLottie Visual Ring */}
+              <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
+                
+                {/* Seamless Floating Lottie Player */}
+                <div className="w-64 h-64 sm:w-80 sm:h-80 flex items-center justify-center relative animate-float">
+                  <div className="w-full h-full filter drop-shadow-xl">
+                    <DotLottieReact
+                      src="https://lottie.host/a81e8ea6-ed3c-4b5d-810f-29c76f33f815/Dm1ec7Gwhf.lottie"
+                      loop
+                      autoplay
+                    />
+                  </div>
+
+                  {/* Floating Metric Badges around Lottie */}
+                  <div className="absolute top-2 -left-2 px-3.5 py-1.5 rounded-full bg-indigo-600 text-white font-extrabold text-[10px] shadow-lg flex items-center gap-1.5 border border-indigo-400/40">
+                    <Zap className="w-3.5 h-3.5 text-teal-300" /> 0.4ms Latency
+                  </div>
+                  <div className="absolute bottom-2 -right-2 px-3.5 py-1.5 rounded-full bg-teal-600 text-white font-extrabold text-[10px] shadow-lg flex items-center gap-1.5 border border-teal-400/40">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-300" /> 98.8% Precision
+                  </div>
+                </div>
+
               </div>
-            </Link>
 
-            {/* Secondary Action Button */}
-            <Link
-              to="/login"
-              className="px-9 py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-extrabold text-xs sm:text-sm transition-all hover:scale-105 backdrop-blur-xl shadow-lg flex items-center gap-2.5"
-            >
-              <Brain className="w-4 h-4 text-teal-300" />
-              <span>Sign In to Demo Account</span>
-            </Link>
+              {/* Right Side: Headlines, Action Buttons & Trust Items */}
+              <div className="lg:col-span-7 space-y-6 text-left">
+                
+                {/* Pill Badge */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/80 text-indigo-700 dark:bg-indigo-500/10 dark:border-indigo-500/20 dark:text-indigo-300 text-xs font-extrabold uppercase tracking-wider">
+                  <Brain className="w-3.5 h-3.5" /> Next-Gen AI Recruitment
+                </div>
 
-          </div>
+                {/* Main Headline */}
+                <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                  Elevate Your Hiring With <br />
+                  <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-teal-500 bg-clip-text text-transparent">
+                    Vector Intelligence.
+                  </span>
+                </h2>
 
-          {/* Trust Footnote */}
-          <div className="pt-4 flex items-center justify-center flex-wrap gap-6 text-xs font-bold text-slate-400">
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-teal-400" /> No Credit Card Required</span>
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-teal-400" /> Instant Setup</span>
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-teal-400" /> 100% Free Tier</span>
+                {/* Lead Paragraph */}
+                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
+                  Turn unstructured resume PDFs into high-dimensional embeddings. Filter candidates with 60% semantic similarity + 40% hard criteria weighting.
+                </p>
+
+                {/* Call to Action Buttons */}
+                <div className="flex flex-wrap items-center gap-4 pt-2">
+                  <Link
+                    to="/register"
+                    className="px-8 py-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-indigo-600/25 flex items-center gap-2.5 transition-all hover:scale-105 active:scale-95"
+                  >
+                    Create Account Free <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    to="/login"
+                    className="px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-300 text-slate-800 dark:text-slate-200 font-extrabold text-xs sm:text-sm shadow-sm transition-all hover:bg-slate-50"
+                  >
+                    Sign In to Demo Account
+                  </Link>
+                </div>
+
+                {/* Trust Item Checkmarks */}
+                <div className="pt-2 flex flex-wrap items-center gap-6 text-xs font-bold text-slate-500 dark:text-slate-400">
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-teal-600" /> No Credit Card Required</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-teal-600" /> 60-Second Setup</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-teal-600" /> $0 Infrastructure Cost</span>
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
 
         </div>
