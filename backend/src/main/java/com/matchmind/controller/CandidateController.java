@@ -75,11 +75,15 @@ public class CandidateController {
         List<String> extractedSkills = resumeParserService.extractSkills(parsedText);
         Integer expYears = resumeParserService.extractExperienceYears(parsedText);
 
-        CandidateProfile profile = candidateProfileRepository.findByUserId(user.getId())
+        String userId = (user != null) ? user.getId() : "demo-candidate-1";
+        String tenantId = (user != null) ? user.getTenantId() : "default-tenant";
+        String fullName = (user != null) ? user.getFullName() : "Candidate Demo";
+
+        CandidateProfile profile = candidateProfileRepository.findByUserId(userId)
                 .orElse(CandidateProfile.builder()
-                        .userId(user.getId())
-                        .tenantId(user.getTenantId())
-                        .fullName(user.getFullName())
+                        .userId(userId)
+                        .tenantId(tenantId)
+                        .fullName(fullName)
                         .build());
 
         profile.setResumeFileName(file.getOriginalFilename());
