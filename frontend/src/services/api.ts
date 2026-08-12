@@ -1,6 +1,6 @@
 import { useAuthStore } from '../store/useAuthStore';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://matchmind-86yt.onrender.com/api';
 
 async function fetchWithAuth(url: string, options: RequestInit = {}) {
   const token = useAuthStore.getState().token;
