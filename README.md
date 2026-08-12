@@ -1,6 +1,6 @@
 # MatchMind — AI-Powered Job Matching & ATS Platform
 
-![MatchMind Light Theme Banner](https://raw.githubusercontent.com/babludangi6266/MatchMind/main/frontend/public/vite.svg)
+![MatchMind Light Theme Banner](https://raw.githubusercontent.com/babludangi6266/MatchMind/main/docs/matchmind_light_banner.png)
 
 > **MatchMind** is an enterprise-grade, high-dimensional **AI Vector Match & Applicant Tracking System (ATS)** built to overcome the limitations of traditional keyword-based job portals. By converting candidate resumes and job requirements into dense vector embeddings, MatchMind evaluates **semantic intent** combined with **structured hard filters** (salary, experience, location, remote preferences) in a zero-cost infrastructure architecture.
 
