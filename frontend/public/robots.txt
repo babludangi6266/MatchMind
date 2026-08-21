@@ -1,0 +1,8 @@
+# Robots.txt for MatchMind AI Powered Job Matching Platform
+User-agent: *
+Allow: /
+Allow: /register
+Allow: /login
+
+# Sitemaps
+Sitemap: https://match-mind-rose.vercel.app/sitemap.xml

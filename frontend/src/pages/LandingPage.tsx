@@ -77,6 +77,10 @@ const FAQS = [
 ];
 
 export const LandingPage: React.FC = () => {
+  React.useEffect(() => {
+    document.title = 'MatchMind — #1 AI Powered Job Matching & ATS Platform';
+  }, []);
+
   // Live Demo Interactive Vector Match Sandbox State
   const [candidateSkill, setCandidateSkill] = useState(DEMO_PRESETS[0].skill);
   const [jobDescription, setJobDescription] = useState(DEMO_PRESETS[0].job);
@@ -144,11 +148,11 @@ export const LandingPage: React.FC = () => {
                 <span className="text-slate-600 dark:text-slate-300">Semantic AI Job Matching</span>
               </div>
 
-              {/* Main Punchy Gradient Headline */}
+              {/* Main Punchy SEO-Optimized Gradient Headline */}
               <h1 className="font-display text-4xl sm:text-6xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-slate-900 dark:text-white">
-                Hire Candidate Intent. <br />
+                AI Powered Job Matching. <br />
                 <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-teal-500 bg-clip-text text-transparent">
-                  Not Keyword Matches.
+                  Match Candidate Intent.
                 </span>
               </h1>
 
